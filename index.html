@@ -4,15 +4,14 @@
     <title>My Termux Site</title>
 </head><style>
     body { background-color: white; color: black; transition: 0.3s; }
-    .dark-mode { background-color: #121212; color: white; }
+    .dark-mode { background-color: #121212 !important; color: white !important; }
     
-    /* Button ki styling */
     #themeBtn {
         margin-top: 10px;
         border-radius: 5px;
         border: 1px solid #ccc;
+        padding: 10px;
     }
-</style>
 <script>
     function toggleTheme() {
         var element = document.body;
@@ -27,7 +26,8 @@
     }
 </script>
 
-<body style="text-align: center; background-color: #f0f0f0;">
+<body style="text-align: center;">
+
 <button onclick="toggleTheme()" id="themeBtn" style="padding: 10px; cursor: pointer;">
     Switch to Dark Mode
 </button>
