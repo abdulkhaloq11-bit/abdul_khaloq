@@ -32,27 +32,56 @@
     Switch to Dark Mode
 </button>
 
-    <h1><h1>Welcome to Abdul Khaliq's Website</h1>
-!</h1>
+    <h1>Welcome to Abdul Khaliq's Website</h1>
     <p><img src="myphoto.jpg" alt="Abdul Khaliq" style="width:200px; border-radius:50%;">
 <div style="margin-top: 20px;">
-    <a href="https://wa.me/923375090102" target="_blank" style="text-decoration: none; background-color: #25D366; color: white; padding: 10px 20px; border-radius: 50px; font-weight: bold; display: inline-flex; align-items: center;">
-        <span style="margin-right: 8px;">💬</span> WhatsApp Me
+    <a href="https://wa.me/923375090102" target="_blank" style="text-decoration: none; backm<!DOCTYPE html>
+<html>
+<head>
+    <title>My Termux Site</title>
+    <style>
+        body { background-color: white; color: black; transition: 0.3s; text-align: center; font-family: sans-serif; }
+        .dark-mode { background-color: #121212 !important; color: white !important; }
+        
+        #themeBtn {
+            margin: 20px;
+            padding: 10px 20px;
+            border-radius: 5px;
+            border: 1px solid #ccc;
+            cursor: pointer;
+        }
+        img { width: 200px; border-radius: 50%; margin-top: 20px; }
+        .links { margin-top: 20px; }
+    </style>
+</head>
+<body>
 
-<div style="margin-top: 20px;">
-    <h3>Watch My Favorite Movie</h3>
-    <a href="APNA_GOOGLE_DRIVE_LINK_YAHAN_DAAL_DEIN" target="_blank" style="background-color: red; color: white; padding: 10px; border-radius: 5px; text-decoration: none;">
-        Watch Movie Online
-<video width="320" height="240" controls>
-  <source src="my_movie.mp4" type="video/mp4">
-  Your browser does not support the video tag.
-</video>
+    <button onclick="toggleTheme()" id="themeBtn">Switch to Dark Mode</button>
 
-    </a>
-</div>
+    <h1>Welcome to Abdul Khaliq's Website</h1>
+    
+    <img src="myphoto.jpg" alt="Abdul Khaliq">
 
-    </a>
-</div>.</p>
+    <div class="links">
+        <a href="https://wa.me/923375090102" target="_blank" style="text-decoration: none; color: green; font-weight: bold;">
+            <span>💬</span> WhatsApp Me
+        </a>
+    </div>
+
+    <script>
+        function toggleTheme() {
+            var element = document.body;
+            element.classList.toggle("dark-mode");
+            
+            var btn = document.getElementById("themeBtn");
+            if (element.classList.contains("dark-mode")) {
+                btn.innerHTML = "Switch to Light Mode";
+            } else {
+                btn.innerHTML = "Switch to Dark Mode";
+            }
+        }
+    </script>
+
 </body>
 </html>
 
