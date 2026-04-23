@@ -2,14 +2,43 @@
 <html>
 <head>
     <title>My Termux Site</title>
-</head>
+</head><style>
+    body { background-color: white; color: black; transition: 0.3s; }
+    .dark-mode { background-color: #121212; color: white; }
+    
+    /* Button ki styling */
+    #themeBtn {
+        margin-top: 10px;
+        border-radius: 5px;
+        border: 1px solid #ccc;
+    }
+</style>
+<script>
+    function toggleTheme() {
+        var element = document.body;
+        element.classList.toggle("dark-mode");
+        
+        var btn = document.getElementById("themeBtn");
+        if (element.classList.contains("dark-mode")) {
+            btn.innerHTML = "Switch to Light Mode";
+        } else {
+            btn.innerHTML = "Switch to Dark Mode";
+        }
+    }
+</script>
+
 <body style="text-align: center; background-color: #f0f0f0;">
+<button onclick="toggleTheme()" id="themeBtn" style="padding: 10px; cursor: pointer;">
+    Switch to Dark Mode
+</button>
+
     <h1><h1>Welcome to Abdul Khaliq's Website</h1>
 !</h1>
     <p><img src="myphoto.jpg" alt="Abdul Khaliq" style="width:200px; border-radius:50%;">
 <div style="margin-top: 20px;">
     <a href="https://wa.me/923375090102" target="_blank" style="text-decoration: none; background-color: #25D366; color: white; padding: 10px 20px; border-radius: 50px; font-weight: bold; display: inline-flex; align-items: center;">
         <span style="margin-right: 8px;">💬</span> WhatsApp Me
+
 <div style="margin-top: 20px;">
     <h3>Watch My Favorite Movie</h3>
     <a href="APNA_GOOGLE_DRIVE_LINK_YAHAN_DAAL_DEIN" target="_blank" style="background-color: red; color: white; padding: 10px; border-radius: 5px; text-decoration: none;">
