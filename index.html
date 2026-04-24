@@ -3,66 +3,107 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Abdul Khaliq's Site</title>
+    <title>Abdul Khaliq - Official Website</title>
+    
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+
     <style>
-        body { 
-            background-color: white; 
-            color: black; 
-            transition: 0.3s; 
-            text-align: center; 
-            font-family: Arial, sans-serif; 
+        body {
+            font-family: Arial, sans-serif;
+            text-align: center;
+            transition: background-color 0.3s, color 0.3s;
             margin: 0;
             padding: 20px;
         }
         .dark-mode { 
-            background-color: #121212 !important; 
-            color: white !important; 
+            background-color: #1a1a1a; 
+            color: white; 
         }
-        #themeBtn {
-            margin: 20px;
-            padding: 12px 24px;
-            border-radius: 30px;
-            border: 2px solid #555;
+        
+        /* Search Bar Styling */
+        .search-container {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            margin: 20px 0;
+        }
+        .search-input {
+            padding: 10px 15px;
+            border: 1px solid #ccc;
+            border-radius: 25px 0 0 25px;
+            outline: none;
+            width: 180px;
+        }
+        .search-btn {
+            background: #250366;
+            color: white;
+            padding: 10px 20px;
+            border: none;
+            border-radius: 0 25px 25px 0;
             cursor: pointer;
-            font-weight: bold;
+            display: flex;
+            align-items: center;
         }
-        img { 
-            width: 200px; 
+        
+        /* Profile Image Styling */
+        img {
+            width: 200px;
             height: 200px;
-            border-radius: 50%; 
+            border-radius: 50%;
             object-fit: cover;
             border: 5px solid #ccc;
             margin-top: 20px;
         }
+
+        /* WhatsApp Button Styling */
         .whatsapp-link {
             display: inline-block;
             margin-top: 25px;
-            padding: 10px 20px;
-            background-color: #25D366;
+            padding: 12px 25px;
+            background-color: #25d366;
             color: white;
             text-decoration: none;
+            border-radius: 50px;
+            font-weight: bold;
+        }
+        
+        /* Theme Toggle Button */
+        #themeBtn {
+            cursor: pointer;
+            padding: 10px 20px;
+            margin-top: 10px;
             border-radius: 5px;
+            border: 1px solid #ccc;
         }
     </style>
 </head>
 <body>
 
+    <form action="https://www.google.com/search" method="get" target="_blank" class="search-container">
+        <input type="text" name="q" placeholder="Search my site..." class="search-input" required>
+        
+        <input type="hidden" name="as_sitesearch" value="www.abdulkhaliq.com"> 
+        
+        <button type="submit" class="search-btn">
+            <i class="fas fa-search"></i>
+        </button>
+    </form>
+
     <button onclick="toggleTheme()" id="themeBtn">Switch to Dark Mode</button>
 
-    <h1>Welcome to Abdul Khaliq's Website</h1>
-    
+    <h1>Welcome</h1>
     <img src="myphoto.jpg" alt="Abdul Khaliq">
 
     <br>
+
     <a href="https://wa.me/923375090102" class="whatsapp-link" target="_blank">
-        💬 WhatsApp Me
+        <i class="fab fa-whatsapp"></i> WhatsApp Me
     </a>
 
     <script>
         function toggleTheme() {
             var element = document.body;
             element.classList.toggle("dark-mode");
-            
             var btn = document.getElementById("themeBtn");
             if (element.classList.contains("dark-mode")) {
                 btn.innerHTML = "Switch to Light Mode";
@@ -70,8 +111,8 @@
                 btn.style.color = "black";
             } else {
                 btn.innerHTML = "Switch to Dark Mode";
-                btn.style.backgroundColor = "black";
-                btn.style.color = "white";
+                btn.style.backgroundColor = "";
+                btn.style.color = "";
             }
         }
     </script>
