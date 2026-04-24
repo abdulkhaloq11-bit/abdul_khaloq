@@ -76,7 +76,18 @@
             border: 1px solid #ccc;
         }
     </style>
-</head>
+</head><script>
+  // Jaise hi user screen par kahin bhi click karega, awaz aayegi
+  window.addEventListener('click', function() {
+    const speech = new SpeechSynthesisUtterance();
+    speech.text = "Welcome to my website"; // Yahan aap apna message change kar sakte hain
+    speech.volume = 1;
+    speech.rate = 1;
+    speech.pitch = 1;
+
+    window.speechSynthesis.speak(speech);
+  }, { once: true }); // 'once: true' se ye sirf pehli baar click karne par chalega
+</script>
 <body>
 
     <form action="https://www.google.com/search" method="get" target="_blank" class="search-container">
